@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Create Warehouse</title>
-	<link rel="stylesheet" type="text/css" href="upload.css">
+	<title>ForgotPassword</title>
+	<link rel="stylesheet" type="text/css" href="forgot.css">
 	<script>
 		function passwordChange() {
-			var email = document.getElementById('email').value;
-			var newpassword = document.getElementById('newPassword').value;
-			var confirmpassword = document.getElementById('confirmPassword').value;
+			var email = document.getElementById('mail').value;
+			var newpassword = document.getElementById('newpassword').value;
+			var confirmpassword = document.getElementById('confirmpassword').value;
 			if (email == "" || newpassword == "" || confirmpassword == "") {
 				alert('Please fill all the details');
 			}
@@ -17,10 +16,8 @@
 				alert("password mismatch");
 			}
 		}
-
 	</script>
 </head>
-
 <body>
 	<div class="wrapper">
 		<div class="sidebar">
@@ -37,19 +34,24 @@
 		</div>
 	</div>
 	<div class="forgot">
-		<h1>Change Password</h1>
-
-		<label for="Email">Email:</label>
-		<input type="email" id="email" name="email" title="Email" />
-
-		<label for="newPassword">New Password:</label>
-		<input type="password" id="newPassword" name="newPassword" title="New password" />
-
-		<label for="confirmPassword">Confirm Password:</label>
-		<input type="password" id="confirmPassword" name="confirmPassword" title="Confirm new password" />
-
-		<input class="w3-btn-w3-black" type="submit" value="Change Password" title="Change password" onclick="passwordChange()" />
-	</div>
+		<h2>Change Password</h2>
+		<form  style="text-align: center;">
+			<div class = textbox>
+				<i class="fa fa-envelope" aria-hidden="true"></i>
+				<input type="email" id="mail" name="email" title="Email" placeholder="abc@gmail.com" />
+			</div>
+			<div class = textbox>
+				<i class="fa fa-lock" aria-hidden="true"></i>
+				<input type="password" id="newpassword" placeholder="New Password" />
+			</div>
+			<div class = textbox>
+				<i class="fa fa-lock" aria-hidden="true"></i>
+				<input type="password" id="confirmpassword" placeholder="Re-Type Password" />
+			</div>
+			<input class="w3-btn-w3-black" type="submit" value="Submit"  onclick="passwordChange()" style="background-color: green;">
+			<input class="w3-btn-w3-black" type="reset" value="Cancel" style="background-color: red;">
+		</form>
+</div>
 </body>
 
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="role.css">
+    <title>
+        Dalrada Dashboard
+    </title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+                <li class="active"><a href="managerole.html"><i class="fa fa-user" aria-hidden="true"></i>CreateRole</a>
+                </li>
+                <li><a href="manageusers.html"><i class="fa fa-desktop" aria-hidden="true"></i>Manage-Users</a></li>
+                <li><a href="warehouses.html"><i class="fa fa-list" aria-hidden="true"></i>Manage</a></li>
+                <li><a href="upload.html"><i class="fa fa-upload" aria-hidden="true"></i>Upload</a></li>
+                <li><a href="reconcile.html"><i class="fa fa-id-card" aria-hidden="true"></i>Re-Concile</a></li>
+                <li><a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="role">
+            <h2>Manage Role</h2>
+            <form action="index.html" style="text-align: center;">
+                <div class = textbox>
+                    <!-- <label>Enter Role:</label> -->
+                    <i class="fa fa-black-tie" aria-hidden="true"></i>
+                    <input type="text" name="" value="" placeholder="e.g., Manager,Executive">
+                </div>
+                <input class="button" type="submit" value="Create" style="background-color: green;">
+                <input class="button" type="reset" value="Cancel" style="background-color: red;">
+            </form>
+    </div>
+    <div class="tabledata">
+        <table>
+            <tbody>
+				<tr>
+					<th>RoleName</th>
+					<th>Status</th>
+					<th>Action</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

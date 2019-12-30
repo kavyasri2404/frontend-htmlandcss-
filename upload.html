@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Create Warehouse</title>
+	<link rel="stylesheet" type="text/css" href="upload.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="sidebar">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+				<li><a href="manageRoles.html"><i class="fa fa-user" aria-hidden="true"></i>CreateRole</a></li>
+				<li><a href="manageusers.html"><i class="fa fa-desktop" aria-hidden="true"></i>Manage-Users</a></li>
+				<li><a href="warehouses.html"><i class="fa fa-list" aria-hidden="true"></i>Manage</a></li>
+				<li class="active"><a href="upload.html"><i class="fa fa-upload" aria-hidden="true"></i>Upload</a></li>
+				<li><a href="reconcile.html"><i class="fa fa-id-card" aria-hidden="true"></i>Re-Concile</a></li>
+				<li><a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="upload">
+		<div class="selection">
+			<h1>Manage Warehouses</h1>
+			<h3>Warehouse Invoice Details:</h3>
+			<label for="code">Select Warehouse:</label>
+			<select id="code" name="code">
+				<option value="Select Warehouse">Select Warehouse</option>
+				<option value="warehouse1(23451)">warehouse1(23451)</option>
+				<option value="warehouse2(23421)">warehouse2(23421)</option>
+				<option value="warehouse4(23436)">warehouse4(23436)</option>
+				<option value="warehouse5(28754)">warehouse5(28754)</option>
+			</select>
+		</div>
+		<div class="file">
+			Upload Invoice Excel File: <input type="file" name="myFile"><br><br>
+			<input class="button" type="submit" value="create" onclick="alert('warehouse invoice details created')">
+			<input class="button" type="reset" value="cancel">
+		</div>
+	</div>
+	<div class="order">
+		<div class="selection">
+			<h3>OrderDetails:</h3>
+			<label for="date">From Date:</label>
+			<input type="date" name="date">
+			<label for="date">To Date:</label>
+			<input type="date" name="date">
+		</div>
+		<div class="file">
+			Upload Order Csv File: <input type="file" name="myFile"><br><br>
+			<input class="button" type="submit" value="create" onclick="alert(' order csv details created')">
+			<input class="button" type="reset" value="cancel">
+		</div>
+	</div>
+</body>
+
+</html>

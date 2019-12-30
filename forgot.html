@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Create Warehouse</title>
+	<link rel="stylesheet" type="text/css" href="upload.css">
+	<script>
+		function passwordChange() {
+			var email = document.getElementById('email').value;
+			var newpassword = document.getElementById('newPassword').value;
+			var confirmpassword = document.getElementById('confirmPassword').value;
+			if (email == "" || newpassword == "" || confirmpassword == "") {
+				alert('Please fill all the details');
+			}
+			else if (newpassword != confirmpassword) {
+				alert("password mismatch");
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="sidebar">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+				<li><a href="manageRoles.html"><i class="fa fa-user" aria-hidden="true"></i>CreateRole</a></li>
+				<li><a href="manageusers.html"><i class="fa fa-desktop" aria-hidden="true"></i>Manage-Users</a></li>
+				<li><a href="warehouses.html"><i class="fa fa-list" aria-hidden="true"></i>Manage</a></li>
+				<li><a href="upload.html"><i class="fa fa-upload" aria-hidden="true"></i>Upload</a></li>
+				<li><a href="reconcile.html"><i class="fa fa-id-card" aria-hidden="true"></i>Re-Concile</a></li>
+				<li><a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="forgot">
+		<h1>Change Password</h1>
+
+		<label for="Email">Email:</label>
+		<input type="email" id="email" name="email" title="Email" />
+
+		<label for="newPassword">New Password:</label>
+		<input type="password" id="newPassword" name="newPassword" title="New password" />
+
+		<label for="confirmPassword">Confirm Password:</label>
+		<input type="password" id="confirmPassword" name="confirmPassword" title="Confirm new password" />
+
+		<input class="w3-btn-w3-black" type="submit" value="Change Password" title="Change password" onclick="passwordChange()" />
+	</div>
+</body>
+
+</html>

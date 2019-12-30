@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Create Warehouse</title>
+	<link rel="stylesheet" type="text/css" href="upload.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="sidebar">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+				<li><a href="manageRoles.html"><i class="fa fa-user" aria-hidden="true"></i>CreateRole</a></li>
+				<li><a href="manageusers.html"><i class="fa fa-desktop" aria-hidden="true"></i>Manage-Users</a></li>
+				<li><a href="warehouses.html"><i class="fa fa-list" aria-hidden="true"></i>Manage</a></li>
+				<li><a href="upload.html"><i class="fa fa-upload" aria-hidden="true"></i>Upload</a></li>
+				<li class="active"><a href="reconcile.html"><i class="fa fa-id-card" aria-hidden="true"></i>Re-Concile</a></li>
+				<li><a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="reconcile">
+		<div class="selection">
+			<h1>Reconcile</h1>
+			<h3>OrderDetails:</h3>
+			<label for="date">From Date:</label>
+			<input type="date" name="date">
+			<label for="date">To Date:</label>
+			<input type="date" name="date">
+		</div>
+		<input class="button" type="submit" value="Run" onclick="alert('Reconcile details')">
+		<input class="button" type="reset" value="cancel">
+	</div>
+</body>
+
+</html>

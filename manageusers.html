@@ -1,95 +1,93 @@
 <!DOCTYPE html>
-<html>
+
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Create User</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script>
-	function Update() {
-		var table = document.getElementById("mytable");
-		var name = document.getElementById('fname').value;
-		var email = document.getElementById('email').value;
-		var code = document.getElementById('code').value;
-		var newRow = table.insertRow(table.rows.length / 2 + 1);
-		var cell1 = newRow.insertCell(0);
-		var cell2 = newRow.insertCell(1);
-		var cell3 = newRow.insertCell(2);
-		var cell4 = newRow.insertCell(3);
-		var cell5 = newRow.insertCell(4);
-		cell1.innerHTML = name;
-		cell2.innerHTML = email;
-		cell3.innerHTML = code;
-		cell4.innerHTML = "Disable";
-		var button = document.createElement('button');
-		var bText = document.createTextNode("Change Status");
-		button.type = button;
-		button.appendChild(bText);
-		button.id = "demo";
-		button.type = button;
-		cell5.appendChild(button);
-		//document.getElementById("demo").onclick = function () { myFunction() };
-		// function myFunction() {
-		// 	var x = document.getElementsByName(cell2);
-		// 	x[0] = "Enable";
-		// }
-		document.getElementById("demo").addEventListener("click", function (event) {
-			event.preventDefault();
-			if (cell4.innerHTML = "Disable") {
-				cell4.innerHTML = "Enable";
-			}
-			if(event.detail==2){
-				cell4.innerHTML = "Disable";
-			}
-		});
-	}
-</script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="user.css">
+    <title>
+        Dalrada Dashboard
+    </title>
 </head>
 
 <body>
-	<div class="wrapper">
-		<div class="sidebar">
-			<h2>Menu</h2>
-			<ul>
-				<li><a href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
-				<li><a href="manageRoles.html"><i class="fa fa-user" aria-hidden="true"></i>CreateRole</a></li>
-				<li class="active"><a href="manageusers.html"><i class="fa fa-desktop" aria-hidden="true"></i>Manage-Users</a></li>
-				<li><a href="warehouses.html"><i class="fa fa-list" aria-hidden="true"></i>Manage</a></li>
-				<li><a href="upload.html"><i class="fa fa-upload" aria-hidden="true"></i>Upload</a></li>
-				<li><a href="reconcile.html"><i class="fa fa-id-card" aria-hidden="true"></i>Re-Concile</a></li>
-				<li><a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
-			</ul>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+                <li><a href="managerole.html"><i class="fa fa-user" aria-hidden="true"></i>CreateRole</a></li>
+                <li class="active"><a href="manageusers.html"><i class="fa fa-desktop" aria-hidden="true"></i>Manage-Users</a></li>
+                <li><a href="warehouses.html"><i class="fa fa-list" aria-hidden="true"></i>Manage</a></li>
+                <li><a href="upload.html"><i class="fa fa-upload" aria-hidden="true"></i>Upload</a></li>
+                <li><a href="reconcile.html"><i class="fa fa-id-card" aria-hidden="true"></i>Re-Concile</a></li>
+                <li><a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="user">
+            <h2>Add User</h2>
+            <form action="index.html" style="text-align: center;">
+                <div class = textbox>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text" name="" value="" placeholder="UserName">
+				</div>
+				<div class = textbox>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <input type="text" name="" value="" placeholder="Email-Id">
+				</div>
+				<div class = select>
+					<i class="fa fa-black-tie" aria-hidden="true"></i>
+					<select id="code" name="code">
+						<option value="Manager">Manager</option>
+						<option value="Executive">Executive</option>
+						<option value="Admin">Admin</option>
+						<option value="Tester">Tester</option>
+					</select>
+				</div>
+				<div class = textbox>
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="text" name="" value="" placeholder="Password">
+				</div>
+				<div class= "enter">
+					<input  class="button" type="submit" value="Create" style="background-color: green;">
+					<input  class="button" type="reset" value="Cancel" style="background-color: red;">
+				</div>
+					
+			</form>
 		</div>
-	</div>
-	<div class="container-user">
-		  <label for="fname">FullName</label>
-		  <input type="text" id="fname" name="fullname" placeholder="User name..">
-		  <label for="lname">Email</label>
-		  <input type="email" id="email" name="email" placeholder="User Emailid.">
-		  <label for="code">Role</label>
-		  <select id="code" name="code">
-			<option value="Manager">Manager</option>
-			<option value="Executive">Executive</option>
-			<option value="Admin">Admin</option>
-			<option value="Tester">Tester</option>
-		  </select>
-		  <label for="password">Password</label>
-		  <input type="password" id="password" name="password" placeholder="password">
-		  <input class="button" type="submit" value="save" onclick="Update()">
-		  <input class="button" type="reset" value="cancel">
-	  </div>
-	  <div class="user-creation">
-		<form class="form-inline">
-			<h2>Registered Users</h2>
-			<table id="mytable">
+    <div class="tabledata">
+        <h2>Users Registered</h2>
+        <table>
+            <tbody>
 				<tr>
 					<th>Name</th>
 					<th>Emailid</th>
 					<th>Role</th>
-					 <th>Status</th>
-					 <th>Action</th>
+					<th>Status</th>
+					<th>Action</th>
+                </tr>
+                <tr>
+					<td>Fawad</td>
+					<td>Fawad@prakat.in</td>
+					<td>Manager</td>
+                    <td>Disable</td>
+                    <td><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+					<td>Vamsi</td>
+					<td>vamsi@prakat.in</td>
+					<td>Admin</td>
+                    <td>Disable</td>
+                    <td><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+                </tr>
+				<tr>
+					<td>Aahana</td>
+					<td>Aahana@prakat.in</td>
+					<td>Manager</td>
+                    <td>Disable</td>
+                    <td><i class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
 				</tr>
-			</table>
-	</div>
+            </tbody>
+        </table>
+    </div>
 </body>
-
 </html>

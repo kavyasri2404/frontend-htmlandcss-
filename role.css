@@ -66,3 +66,12 @@ body{
 	float: left;
 	margin: 0 10px;
 }
+.tabledata{
+	width: 300px;
+	position: fixed;
+	top: 40%;
+	left: 25%;
+}
+.tabledata h2{
+	color: #004275;
+}

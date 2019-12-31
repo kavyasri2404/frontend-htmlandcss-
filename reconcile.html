@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html>
+
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Create Warehouse</title>
-	<link rel="stylesheet" type="text/css" href="upload.css">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="reconcile.css">
+	<title>
+		Dalrada Dashboard
+	</title>
 </head>
+
 <body>
 	<div class="wrapper">
 		<div class="sidebar">
 			<h2>Menu</h2>
 			<ul>
 				<li><a href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
-				<li><a href="manageRoles.html"><i class="fa fa-user" aria-hidden="true"></i>CreateRole</a></li>
+				<li><a href="managerole.html"><i class="fa fa-user" aria-hidden="true"></i>CreateRole</a></li>
 				<li><a href="manageusers.html"><i class="fa fa-desktop" aria-hidden="true"></i>Manage-Users</a></li>
 				<li><a href="warehouses.html"><i class="fa fa-list" aria-hidden="true"></i>Manage</a></li>
 				<li><a href="upload.html"><i class="fa fa-upload" aria-hidden="true"></i>Upload</a></li>
@@ -20,17 +23,33 @@
 			</ul>
 		</div>
 	</div>
-	<div class="reconcile">
-		<div class="selection">
-			<h1>Reconcile</h1>
-			<h3>OrderDetails:</h3>
-			<label for="date">From Date:</label>
-			<input type="date" name="date">
-			<label for="date">To Date:</label>
-			<input type="date" name="date">
-		</div>
-		<input class="button" type="submit" value="Run" onclick="alert('Reconcile details')">
-		<input class="button" type="reset" value="cancel">
+	<div class="order">
+		<h3>Order Details:</h3>
+		<form action="index.html" style="text-align: center;">
+			<table>
+				<tr align="left">
+					<td>
+						<div class="date">
+							<label for="date">From Date:</label>
+							<input type="date" name="date" data-date-format=MMMM-DD-YYYY>
+						</div>
+					<td>
+						<div class="date">
+							<label for="date">To Date:</label>
+							<input type="date" name="date">
+						</div>
+					</td>
+				</tr>
+				<tr align="right">
+					<td>
+						<div class="enter">
+							<input class="button" type="submit" value="Run" style="background-color: green;">
+							<input class="button" type="reset" value="Cancel" style="background-color: red;">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
 	</div>
 </body>
 

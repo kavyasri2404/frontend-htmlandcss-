@@ -1,0 +1,80 @@
+@charset "ISO-8859-1";
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "dashboard.css";
+body{	
+	margin: 0px;
+	padding:0px;
+	font-family: sans-serif;
+    background-color: #FFFFFF;
+}
+table{
+	width: 1000px;
+}
+td{
+    width: 300px;
+    table-layout:fixed;
+}
+.order{
+    box-shadow: 10px 0px 30px 0px #004275;
+    width: 1000px;
+	position: absolute;
+	top: 30%;
+	left: 59%;
+	transform: translate(-50%,-50%);
+	color: #004275;
+	padding: 10px;
+    background-color:#FFFFFF;
+    display: inline-block;
+}
+.date{
+	width:100%;
+	overflow: hidden;
+	font-size: 22px;
+	padding: 2px 0px;
+	margin: 3px 2px;
+    /* border-bottom: 1px solid  #004275; */
+    color: #004275;
+    display: inline-block;
+}
+.date label{
+	font-size: 13px;
+}
+input[type=date]{
+	border: none;
+	outline: none;
+	background: none;
+	color: black;
+	font-size: 17px;
+	width: 80%;
+	float: inline-end;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid #004275;
+}
+.order h3{
+	text-align: left;
+    padding: 5px;
+    text-decoration: underline  #004275;
+}
+.button
+{
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	background: none;
+	border: 0.5px solid transparent;
+	color: #FFFFFF;
+	padding: 5px;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 1.5%;
+	width: 100px;
+	border-radius: 20px;
+	display: inline-block;
+	left: 30%;
+	transform: translate(-50%,-50%);
+    position: relative;
+}
+.button:hover {
+	opacity: 0.7;
+	color: #A5A5A5;
+}

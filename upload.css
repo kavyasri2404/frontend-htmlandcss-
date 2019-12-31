@@ -54,12 +54,25 @@ td{
 	font-size: 22px;
 	padding: 2px 0px;
 	margin: 3px 2px;
-    border-bottom: 1px solid  #004275;
+    /* border-bottom: 1px solid  #004275; */
     color: #004275;
     display: inline-block;
 }
 .date label{
-	font-size: 16px;
+	font-size: 13px;
+}
+input[type=date]{
+	border: none;
+	outline: none;
+	background: none;
+	color: black;
+	font-size: 17px;
+	width: 80%;
+	float: inline-end;
+    margin: 0 10px;
+    text-align: center;
+	font-size: 18px;
+	border-bottom: 1px solid #004275;
 }
 .file{
 	width: 100%;
@@ -69,16 +82,6 @@ td{
 	margin: 8px 0;
     color: #004275;
     display: inline-block;
-}
-input[type=date]{
-	border: none;
-	outline: none;
-	background: none;
-	color: black;
-	font-size: 17px;
-	width: 90%;
-	float: inline-end;
-	margin: 0 10px;
 }
 .file label
 {

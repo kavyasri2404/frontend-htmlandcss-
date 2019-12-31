@@ -1,0 +1,145 @@
+@charset "ISO-8859-1";
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "dashboard.css";
+body{	
+	margin: 0px;
+	padding:0px;
+	font-family: sans-serif;
+    background-color: #FFFFFF;
+}
+.warehouse{
+    box-shadow: 10px 0px 30px 0px #004275;
+    width: 1000px;
+	position: absolute;
+	top: 30%;
+	left: 59%;
+	transform: translate(-50%,-50%);
+	color: #004275;
+	padding: 10px;
+    background-color:#FFFFFF;
+    display: inline-block;
+}
+.select{
+    width: 80%;
+	overflow: hidden;
+	font-size: 22px;
+	padding: 8px 0px;
+	margin: 8px 0;
+    border-bottom: 1px solid  #004275;
+    color: #004275;
+    display: inline-block;
+}
+.warehouse h2{
+    text-align: center;
+    padding: 5px;
+    text-decoration: underline;
+    font-size: 18px;
+}
+.select textarea{
+    border: none;
+	outline: none;
+	background: none;
+	color: black;
+	font-size: 14px;
+	width: 80%;
+	float: left;
+	margin: 0 10px;
+}
+.select i{
+    width: 30px;
+	float: left;
+	text-align: center;
+}
+.textbox
+{
+	width: 40%;
+	overflow: hidden;
+	font-size: 22px;
+	padding: 8px 0px;
+	margin: 8px 0;
+    border-bottom: 1px solid  #004275;
+    color: #004275;
+    display: inline-block;
+}
+
+.textbox i
+{
+	width: 30px;
+	float: left;
+	text-align: center;
+}
+.button
+{
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	background: none;
+	border: 0.5px solid transparent;
+	color: #FFFFFF;
+	padding: 5px;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 1.5%;
+	width: 100px;
+	border-radius: 20px;
+	display: inline-block;
+	left: 30%;
+	transform: translate(-50%,-50%);
+    position: relative;
+}
+.button:hover {
+	opacity: 0.7;
+	color: #A5A5A5;
+  }
+.textbox input
+{
+	border: none;
+	outline: none;
+	background: none;
+	color: black;
+	font-size: 14px;
+	width: 80%;
+	float: left;
+	margin: 0 10px;
+}
+.tabledata{
+	width: 900px;
+	position: fixed;
+	top: 70%;
+	left: 55%;
+	transform: translate(-50%,-50%);
+	color: black;
+}
+.tabledata h2{
+    color: #004275;
+    font-size: 18px;
+    text-align: center;
+}
+table, th{
+    box-shadow: 10px 20px 30px 0px white;
+    border: 1px solid #004275;
+    border-collapse: collapse;
+    width: 200px;
+    table-layout:fixed;
+    height: 20px;
+}
+td{
+    border: 1px solid  #004275 ;
+    width: 300px;
+    table-layout:fixed;
+}
+th{
+    text-decoration: underline;
+}
+th, td {
+    position: relative;
+    padding: 15px;
+    text-align: center;
+    color: #004275;
+    table-layout:fixed;
+}
+table {
+    border-spacing: 5px;
+}
+.tabledata table td .fa
+{
+	color:#004275;
+}

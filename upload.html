@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html>
+
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Create Warehouse</title>
-	<link rel="stylesheet" type="text/css" href="upload.css">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="upload.css">
+	<title>
+		Dalrada Dashboard
+	</title>
 </head>
+
 <body>
 	<div class="wrapper">
 		<div class="sidebar">
 			<h2>Menu</h2>
 			<ul>
 				<li><a href="dashboard.html"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
-				<li><a href="manageRoles.html"><i class="fa fa-user" aria-hidden="true"></i>CreateRole</a></li>
+				<li><a href="managerole.html"><i class="fa fa-user" aria-hidden="true"></i>CreateRole</a></li>
 				<li><a href="manageusers.html"><i class="fa fa-desktop" aria-hidden="true"></i>Manage-Users</a></li>
 				<li><a href="warehouses.html"><i class="fa fa-list" aria-hidden="true"></i>Manage</a></li>
 				<li class="active"><a href="upload.html"><i class="fa fa-upload" aria-hidden="true"></i>Upload</a></li>
@@ -20,39 +23,119 @@
 			</ul>
 		</div>
 	</div>
-	<div class="upload">
-		<div class="selection">
-			<h1>Manage Warehouses</h1>
-			<h3>Warehouse Invoice Details:</h3>
-			<label for="code">Select Warehouse:</label>
-			<select id="code" name="code">
-				<option value="Select Warehouse">Select Warehouse</option>
-				<option value="warehouse1(23451)">warehouse1(23451)</option>
-				<option value="warehouse2(23421)">warehouse2(23421)</option>
-				<option value="warehouse4(23436)">warehouse4(23436)</option>
-				<option value="warehouse5(28754)">warehouse5(28754)</option>
-			</select>
-		</div>
-		<div class="file">
-			Upload Invoice Excel File: <input type="file" name="myFile"><br><br>
-			<input class="button" type="submit" value="create" onclick="alert('warehouse invoice details created')">
-			<input class="button" type="reset" value="cancel">
-		</div>
+	<div class="invoice">
+		<h2>Manage Warehouses</h2>
+		<h3>Invoice Details:</h3>
+		<form action="index.html" style="text-align: center;">
+			<table>
+				<tr>
+					<td>
+						<div class="select">
+							<select id="code" name="code">
+								<option value="null">Select Warehouse</option>
+								<option value="warehouse1(23451)">warehouse1(23451)</option>
+								<option value="warehouse2(23421)">warehouse2(23421)</option>
+								<option value="warehouse4(23436)">warehouse4(23436)</option>
+								<option value="warehouse5(28754)">warehouse5(28754)</option>
+							</select>
+						</div>
+					</td>
+					<td>
+						<div class="file">
+							<label for="">Upload Invoice Excel File:</label>
+							<input type="file" name="myFile"><br><br>
+						</div>
+					</td>
+				</tr>
+				<tr align="end">
+					<td>
+						<div class="enter">
+							<input class="button" type="submit" value="Create" style="background-color: green;">
+							<input class="button" type="reset" value="Cancel" style="background-color: red;">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
 	</div>
 	<div class="order">
-		<div class="selection">
-			<h3>OrderDetails:</h3>
-			<label for="date">From Date:</label>
-			<input type="date" name="date">
-			<label for="date">To Date:</label>
-			<input type="date" name="date">
-		</div>
-		<div class="file">
-			Upload Order Csv File: <input type="file" name="myFile"><br><br>
-			<input class="button" type="submit" value="create" onclick="alert(' order csv details created')">
-			<input class="button" type="reset" value="cancel">
-		</div>
+		<h3>Order Details:</h3>
+		<form action="index.html" style="text-align: center;">
+			<table>
+				<tr align="left">
+					<td>
+						<div class="date">
+							<label for="date">From Date:</label>
+							<input type="date" name="date" data-date-format=MMMM-DD-YYYY>
+						</div>
+					<td>
+						<div class="date">
+							<label for="date">To Date:</label>
+							<input type="date" name="date">
+						</div>
+					</td>
+				</tr>
+				<tr align="center">
+					<td>
+						<div class="file">
+							<label for="">Upload Invoice Excel File:</label>
+							<input type="file" name="myFile"><br><br>
+						</div>
+					</td>
+					<td>
+						<div class="enter">
+							<input class="button" type="submit" value="Create" style="background-color: green;">
+							<input class="button" type="reset" value="Cancel" style="background-color: red;">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
 	</div>
+	<!-- <form action="index.html" style="text-align: center;">
+			<div class="file">
+				<h2>Upload Invoice Excel File:</h2>
+				<input type="file" name="myFile"><br><br>
+			</div>
+			<div class="select">
+				<select id="code" name="code">
+					<option value="Select Warehouse">Select Warehouse</option>
+					<option value="warehouse1(23451)">warehouse1(23451)</option>
+					<option value="warehouse2(23421)">warehouse2(23421)</option>
+					<option value="warehouse4(23436)">warehouse4(23436)</option>
+					<option value="warehouse5(28754)">warehouse5(28754)</option>
+				</select>
+			</div>
+			 <div class="file">
+				<h2>Upload Invoice Excel File:</h2>
+				<input type="file" name="myFile"><br><br>
+			</div> -->
+	<!-- <div class="enter">
+				<input class="button" type="submit" value="Create" style="background-color: green;">
+				<input class="button" type="reset" value="Cancel" style="background-color: red;">
+			</div>
+		</form> -->
+	<!-- <div class="order">
+		<h2>Add Warehouse</h2>
+		<form action="index.html" style="text-align: center;">
+			<div class=textbox>
+				<i class="fa fa-user-circle" aria-hidden="true"></i>
+				<input type="text" name="" value="" placeholder="WarehouseName">
+			</div>
+			<div class=textbox>
+				<i class="fa fa-sort-numeric-asc" aria-hidden="true"></i>
+				<input type="text" pattern="[0-9]{5-10}" title="Enter only numbers" placeholder="Warehousecode">
+			</div>
+			<div class=select>
+				<i class="fa fa-address-book-o" aria-hidden="true"></i>
+				<textarea name="address" placeholder="Warehouse Address"></textarea>
+			</div>
+			<div class="enter">
+				<input class="button" type="submit" value="Create" style="background-color: green;">
+				<input class="button" type="reset" value="Cancel" style="background-color: red;">
+			</div>
+		</form>
+	</div> -->
 </body>
 
 </html>
